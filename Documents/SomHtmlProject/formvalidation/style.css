@@ -1,0 +1,101 @@
+
+/* styles.css */
+:root {
+  --danger: #d32f2f;
+  --success: #2e7d32;
+  --focus: #1976d2;
+  --border: #cbd5e1;
+  --text: #0f172a;
+  --hint: #64748b;
+  --bg: #ffffff;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: #f8fafc;
+  padding: 2rem;
+}
+
+form {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--bg);
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+}
+
+.form-control {
+  margin-bottom: 1rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  padding: 0.6rem 0.75rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  background: #fff;
+}
+
+input:focus {
+  border-color: var(--focus);
+  box-shadow: 0 0 0 4px rgba(25, 118, 210, 0.15);
+}
+
+/* Visual states with classes (applied via JS) */
+input.error-state {
+  border-color: var(--danger);
+  box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.15);
+}
+
+input.valid-state {
+  border-color: var(--success);
+}
+
+/* Error text */
+.error {
+  color: var(--danger);
+  font-size: 0.875rem;
+  min-height: 1em; /* reserve space to avoid layout shift */
+}
+
+/* Helper hint */
+.hint {
+  color: var(--hint);
+  font-size: 0.825rem;
+}
+
+/* Checkbox alignment */
+.checkbox-control {
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.5rem;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--focus);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

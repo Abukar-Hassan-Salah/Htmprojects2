@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<!-- index.html -->
+<form id="signup-form" novalidate>
+  <h2>Create your account</h2>
+
+  <!-- Name -->
+  <div class="form-control">
+    <label for="name">Full name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="e.g., Abukar Hassan Salah"
+      required
+      minlength="2"
+    />
+    <p class="error" id="name-error" aria-live="polite"></p>
+  </div>
+
+  <!-- Email -->
+  <div class="form-control">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="you@example.com"
+      required
+    />
+    <p class="error" id="email-error" aria-live="polite"></p>
+  </div>
+
+  <!-- Password -->
+  <div class="form-control">
+    <label for="password">Password</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      required
+      minlength="8"
+      autocomplete="new-password"
+    />
+    <small class="hint">At least 8 characters, include a number and a letter.</small>
+    <p class="error" id="password-error" aria-live="polite"></p>
+  </div>
+
+  <!-- Confirm Password -->
+  <div class="form-control">
+    <label for="confirm-password">Confirm password</label>
+    <input
+      type="password"
+      id="confirm-password"
+      name="confirmPassword"
+      required
+      autocomplete="new-password"
+    />
+    <p class="error" id="confirm-error" aria-live="polite"></p>
+  </div>
+
+  <!-- Age (number range) -->
+  <div class="form-control">
+    <label for="age">Age</label>
+    <input
+      type="number"
+      id="age"
+      name="age"
+      min="13"
+      max="120"
+      required
+      placeholder="13–120"
+    />
+    <p class="error" id="age-error" aria-live="polite"></p>
+  </div>
+
+  <!-- Terms -->
+  <div class="form-control checkbox-control">
+    <input type="checkbox" id="terms" name="terms" required />
+    <label for="terms">I agree to the Terms & Privacy Policy</label>
+    <p class="error" id="terms-error" aria-live="polite"></p>
+  </div>
+
+  <button type="submit">Sign up</button>
+</form>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
